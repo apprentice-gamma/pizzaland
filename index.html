@@ -37,6 +37,8 @@
         <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.street">
         <label class="control-label" for="inputSmall">City</label>
         <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.city">
+        <label class="control-label" for="inputSmall">State</label>
+        <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.state">
         <label class="control-label" for="inputSmall">Zip Code</label>
         <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.zip">
         <span class="input-group-btn">
@@ -52,10 +54,13 @@
           <h4 class="list-group-item-heading">Choose your address</h4>
           <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
         </a>
-        <a href="#" class="list-group-item" ng-repeat="address in vmAddySearch.addresses">
-          {{address.street}}<br>
-          {{address.city}}<br>
-          {{address.zip}}
+
+        <!-- "player in players | filter:{id: player_id, name:player_name, age:ageFilter}" -->
+
+        <a href="#" class="list-group-item" ng-repeat="address in vmAddySearch.addresses | filter:{'Street Address': vmAddySearch.street, 'City': vmAddySearch.city, 'States': vmAddySearch.state, 'Zip Code':vmAddySearch.zip}">
+          {{address["Street Address"]}}<br>
+          {{address["City"]}}, {{address["States"]}}<br>
+          {{address["Zip Code"]}}
         </a>
         
       </div>
