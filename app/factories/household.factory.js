@@ -2,8 +2,9 @@
 
     angular.module('pizzaland').factory('householdFactory', householdFactory);
 
-    function householdFactory() {
+    function householdFactory($http) {
         var factory = {};
+        factory.addresses = [];
 	        function getDataFromJson(){
 	        	$http.get('./data/demo-data.json').
 	            success(function(data, status, headers, config) {
@@ -16,7 +17,8 @@
      			 // log error
     			});
 			}
-
+			factory.getDataFromJson = getDataFromJson;
+			
         return factory;
     }
 
