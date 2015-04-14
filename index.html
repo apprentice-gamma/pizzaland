@@ -34,11 +34,11 @@
       <h4>Addres Search</h4>
       <div class="form-group">
         <label class="control-label" for="inputSmall">Street Address</label>
-        <input class="form-control input-sm" type="text" id="inputSmall">
+        <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.street">
         <label class="control-label" for="inputSmall">City</label>
-        <input class="form-control input-sm" type="text" id="inputSmall">
+        <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.city">
         <label class="control-label" for="inputSmall">Zip Code</label>
-        <input class="form-control input-sm" type="text" id="inputSmall">
+        <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.zip">
       </div>
     </div>
     
@@ -50,9 +50,9 @@
           <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
         </a>
         <a href="#" class="list-group-item">
-          123 Seseame St<br>
-          Chicago, Il<br>
-          60016
+          {{vmAddySearch.street}}<br>
+          {{vmAddySearch.city}}<br>
+          {{vmAddySearch.zip}}
         </a>
         <a href="#" class="list-group-item">
           123 Seseame St<br>
