@@ -39,6 +39,9 @@
         <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.city">
         <label class="control-label" for="inputSmall">Zip Code</label>
         <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.zip">
+        <span class="input-group-btn">
+         <button class="btn btn-default" type="button" ng-click="vmAddySearch.addAddress()">Submit</button>
+        </span>
       </div>
     </div>
     
@@ -49,21 +52,12 @@
           <h4 class="list-group-item-heading">Choose your address</h4>
           <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
         </a>
-        <a href="#" class="list-group-item">
-          {{vmAddySearch.street}}<br>
-          {{vmAddySearch.city}}<br>
-          {{vmAddySearch.zip}}
+        <a href="#" class="list-group-item" ng-repeat="address in vmAddySearch.addresses">
+          {{address.street}}<br>
+          {{address.city}}<br>
+          {{address.zip}}
         </a>
-        <a href="#" class="list-group-item">
-          123 Seseame St<br>
-          Chicago, Il<br>
-          60016
-        </a>
-        <a href="#" class="list-group-item">
-          123 Seseame St<br>
-          Chicago, Il<br>
-          60016
-        </a>
+        
       </div>
     </div>
   </div>
