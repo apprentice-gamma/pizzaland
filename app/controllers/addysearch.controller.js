@@ -11,7 +11,9 @@ function addySearchController($http){
 	$http.get('./data/demo-data.json').
     success(function(data, status, headers, config) {
       vm.demoData = data;
-      console.log(vm.demoData);
+      // console.log(vm.demoData);
+      vm.addresses = vm.demoData[0]["Owned Households"];
+      console.log(vm.addresses);
     }).
     error(function(data, status, headers, config) {
       // log error
