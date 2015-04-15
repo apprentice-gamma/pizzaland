@@ -1,26 +1,16 @@
 angular.module("pizzaland").controller("addySearchController", addySearchController); 
-function addySearchController($http, householdFactory){
+function addySearchController($http, $scope, householdFactory){
 	var vm = this;
 	vm.street = "";
 	vm.city = "";
 	vm.zip = "";
 	vm.state = "";
-	vm.addresses = undefined;
 	
-	//Retreive JSON data and handle ASYNC callbacks in this Controller
-	householdFactory.getDataFromJson()
-        .success(function(data, status, headers, config) {
-        	//
-        	vm.addresses = data[0]["Owned Households"];
-        	householdFactory.addresses = data[0]["Owned Households"];
-        	//console.log(vm.addresses, householdFactory.addresses);
-        })
-		.error(function(data, status, headers, config) {
-			// log error
-			console.log("An error occured in reading JSON data");
-		});
+	vm.households = householdFactory;
+	
+	vm.households.getDataFromJson();
+	
+	console.log(vm.households);
 
-
-	console.log(vm.addresses);
 }
 

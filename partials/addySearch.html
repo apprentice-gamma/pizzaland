@@ -19,7 +19,7 @@
           <h4 class="list-group-item-heading">Choose your address</h4>
         </a>
 
-        <a href="#" class="list-group-item" ng-repeat="address in vmAddySearch.addresses | filter:{'Street Address': vmAddySearch.street, 'City': vmAddySearch.city, 'States': vmAddySearch.state, 'Zip Code':vmAddySearch.zip}">
+        <a href="#" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses | filter:{'Street Address': vmAddySearch.street, 'City': vmAddySearch.city, 'States': vmAddySearch.state, 'Zip Code':vmAddySearch.zip}">
           {{address["Street Address"]}}<br>
           {{address["City"]}}, {{address["States"]}}<br>
           {{address["Zip Code"]}}
