@@ -52,7 +52,7 @@
 
         <!-- "player in players | filter:{id: player_id, name:player_name, age:ageFilter}" -->
 
-        <a href="#" class="list-group-item" ng-repeat="address in vmAddySearch.addresses | filter:{'Street Address': vmAddySearch.street, 'City': vmAddySearch.city, 'States': vmAddySearch.state, 'Zip Code':vmAddySearch.zip}">
+        <a href="#" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses | filter:{'Street Address': vmAddySearch.street, 'City': vmAddySearch.city, 'States': vmAddySearch.state, 'Zip Code':vmAddySearch.zip}">
           {{address["Street Address"]}}<br>
           {{address["City"]}}, {{address["States"]}}<br>
           {{address["Zip Code"]}}
