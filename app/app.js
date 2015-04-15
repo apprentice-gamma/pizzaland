@@ -9,5 +9,9 @@ pizzaland.config(['$routeProvider', function($routeProvider) {
 	     templateUrl: '../../partials/orderForm.html',
 	});
 
+	$routeProvider.when("/invoice", {
+	     templateUrl: '../../partials/invoice.html',
+	});
+
 	$routeProvider.otherwise({redirectTo: '/'});
 }]);
