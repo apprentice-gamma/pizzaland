@@ -1,25 +1,18 @@
 (function() {
-
     angular.module('pizzaland').factory('householdFactory', householdFactory);
 
     function householdFactory($http) {
         var factory = {};
-        factory.addresses = [];
+        	//properties
+        	factory.addresses = [];
+        	
+        	//methods
+        	factory.getDataFromJson = getDataFromJson;
+
+        	//method declarations
 	        function getDataFromJson(){
-	        	$http.get('./data/demo-data.json').
-	            success(function(data, status, headers, config) {
-	              factory.demoData = data;
-	              // console.log(factory.demoData);
-	              factory.addresses = factory.demoData[0]["Owned Households"];
-	              console.log(factory.addresses);
-	            }).
-    			error(function(data, status, headers, config) {
-     			 // log error
-    			});
+	        	return $http.get('./data/demo-data.json');
 			}
-			factory.getDataFromJson = getDataFromJson;
-			
         return factory;
     }
-
 })();
