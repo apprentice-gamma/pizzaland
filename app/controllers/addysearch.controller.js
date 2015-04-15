@@ -5,10 +5,12 @@ function addySearchController($http, $scope, householdFactory){
 	vm.city = "";
 	vm.zip = "";
 	vm.state = "";
+	
 	vm.households = householdFactory;
 	
 	vm.households.getDataFromJson();
 	
 	console.log(vm.households);
+
 }
 

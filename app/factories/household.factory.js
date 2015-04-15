@@ -1,10 +1,15 @@
 (function() {
-
     angular.module('pizzaland').factory('householdFactory', householdFactory);
 
     function householdFactory($http) {
         var factory = {};
-        factory.addresses = [];
+        	//properties
+        	factory.addresses = [];
+        	
+        	//methods
+        	factory.getDataFromJson = getDataFromJson;
+
+        	//method declarations
 	        function getDataFromJson(){
 	        	$http.get('./data/demo-data.json').
 	            success(function(data, status, headers, config) {	              
@@ -14,10 +19,8 @@
     			error(function(data, status, headers, config) {
      				console.log("There was an error retrieving JSON data");// log error
     			});
+
 			}
-			factory.getDataFromJson = getDataFromJson;
-			
         return factory;
     }
-
 })();
