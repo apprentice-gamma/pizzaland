@@ -5,15 +5,10 @@ function addySearchController($http, $scope, householdFactory){
 	vm.city = "";
 	vm.zip = "";
 	vm.state = "";
-	vm.addresses = householdFactory.addresses;
-
-	householdFactory.getDataFromJson();
-
-	$scope.$watchCollection(householdFactory.addresses, function(newVal, oldVal){
-		console.log(newVal, oldVal);
-	})
-
-
-	console.log(vm.addresses);
+	vm.households = householdFactory;
+	
+	vm.households.getDataFromJson();
+	
+	console.log(vm.households);
 }
 

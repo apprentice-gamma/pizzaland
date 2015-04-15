@@ -7,14 +7,12 @@
         factory.addresses = [];
 	        function getDataFromJson(){
 	        	$http.get('./data/demo-data.json').
-	            success(function(data, status, headers, config) {
-	              factory.demoData = data;
-	              // console.log(factory.demoData);
-	              factory.addresses = factory.demoData[0]["Owned Households"];
+	            success(function(data, status, headers, config) {	              
+	              factory.addresses = data[0]["Owned Households"];
 	              console.log(factory.addresses);
 	            }).
     			error(function(data, status, headers, config) {
-     			 // log error
+     				console.log("There was an error retrieving JSON data");// log error
     			});
 			}
 			factory.getDataFromJson = getDataFromJson;
