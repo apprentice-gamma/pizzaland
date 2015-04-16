@@ -8,7 +8,7 @@ function addySearchController($http, $scope, householdFactory){
 	
 	vm.households = householdFactory;
 	
-	vm.households.getDataFromJson();
+	//vm.households.getDataFromJson();
 	
 	console.log(vm.households);
 
