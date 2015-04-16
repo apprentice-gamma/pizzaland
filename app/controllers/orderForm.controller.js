@@ -22,6 +22,8 @@ function orderFormController($http, householdFactory, $routeParams, $location, i
 
 	function submitOrder(){
 		invoiceFactory.quantity = vm.quantity;
+		invoiceFactory.resident = vm.resident;
+		invoiceFactory.houseObject = vm.houseObject;
 		$location.url('/invoice');
 	}
 
