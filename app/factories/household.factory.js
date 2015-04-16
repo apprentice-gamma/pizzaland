@@ -13,14 +13,13 @@
 
         	//method declarations
 
-            function getData(url, json) {
+            function getData(url) {
                 $http.get(url).
                     success(function(data, status, headers, config) { 
                         if(data.owned_households !== undefined)                
                             factory.addresses = data.owned_households;
                         else
                             factory.addresses = data[0].owned_households;
-                      //console.log(factory.addresses);
                     }).
                     error(function(data, status, headers, config) {
                         console.log("There was an error retrieving JSON data");// log error
