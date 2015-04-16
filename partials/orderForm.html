@@ -2,8 +2,9 @@
 	<div class="row">
 		<div class="col-lg-6">
 			<h3>Your Address</h3>
-			<h5>123 Seseme St<br>Chicago, Il 60016</h5>
-			<h5>{{vmOrderForm.houseID}}</h5>
+			<h5>{{vmOrderform.houseObject["Street Address"]}}<br>
+          {{vmOrderform.houseObject["City"]}}, {{vmOrderform.houseObject["States"]}}<br>
+          {{vmOrderform.houseObject["Zip Code"]}}</h5>
 			<img src="../images/pizza_sup.png">
 		</div>
 		<div class="col-lg-6">
