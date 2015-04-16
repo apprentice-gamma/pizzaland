@@ -2,16 +2,16 @@
 	<div class="row">
 		<div class="col-lg-6">
 			<h3>Name</h3>
-			<h4>{{vmInvoice.invoiceFactory.resident["first name"]}} {{vmInvoice.invoiceFactory.resident["last name"]}}</h4>
+			<h4>{{vmInvoice.invoiceFactory.resident.first_name}} {{vmInvoice.invoiceFactory.resident.last_name}}</h4>
 			<h3>Email</h3>
-			<h4>{{vmInvoice.invoiceFactory.resident["email"]}}</h4>
+			<h4>{{vmInvoice.invoiceFactory.resident.email}}</h4>
 			<h3>Address</h3>
-			<h4>{{vmInvoice.invoiceFactory.houseObject["Street Address"]}}<br>
-          {{vmInvoice.invoiceFactory.houseObject["City"]}}, {{vmInvoice.invoiceFactory.houseObject["States"]}} 
-          {{vmInvoice.invoiceFactory.houseObject["Zip Code"]}}</h4>
+			<h4>{{vmInvoice.invoiceFactory.houseObject.street_address}}<br>
+          {{vmInvoice.invoiceFactory.houseObject.city}}, {{vmInvoice.invoiceFactory.houseObject.states}} 
+          {{vmInvoice.invoiceFactory.houseObject.zip_code}}</h4>
 		</div>
 		<div class="col-lg-6">
-			<h3>You ordered the {{vmInvoice.invoiceFactory.houseObject["Favorite Pizza"]}} Pizza...</h3>
+			<h3>You ordered the {{vmInvoice.invoiceFactory.houseObject.favorite_pizza}} Pizza...</h3>
 			<img src="../images/pizza_sup.png">
 		</div>
 	</div>
@@ -28,27 +28,19 @@
 				<tbody>
 					<tr>
 						<td>Price</td>
-						<td>29.99</td>
+						<td>{{19.95 | currency}}</td>
 					</tr>
 					<tr>
 						<td>Quantity</td>
 						<td>{{vmInvoice.invoiceFactory.quantity}}</td>
 					</tr>
 					<tr>
-						<td>Loyalty Points</td>
-						<td>29.99</td>
-					</tr>
-					<tr>
-						<td>Discount</td>
-						<td>29.99</td>
-					</tr>
-					<tr>
 						<td>Tax</td>
-						<td>29.99</td>
+						<td>{{(vmInvoice.invoiceFactory.quantity*19.95)*.06 | currency}}</td>
 					</tr>
 					<tr>
 						<td>Total</td>
-						<td>29.99</td>
+						<td>{{(vmInvoice.invoiceFactory.quantity*19.95)*1.06 | currency}}</td>
 					</tr>
 				</tbody>
 			</table>
