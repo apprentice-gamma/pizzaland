@@ -5,7 +5,7 @@ function orderFormController($http, householdFactory, $routeParams, $location, i
 	vm.houseID = $routeParams.id;
 	vm.households = householdFactory;
 	vm.houseObject = houseFinder();
-	vm.resident = vm.houseObject.Residents[0];
+	vm.resident = vm.houseObject.residents[0];
 	vm.submitOrder = submitOrder;
 	vm.quantity = 0;
 

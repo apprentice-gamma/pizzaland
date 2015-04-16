@@ -13,7 +13,7 @@
 	        function getDataFromJson(){
 	        	$http.get('./data/demo-data.json').
 	            success(function(data, status, headers, config) {	              
-	              factory.addresses = data[0]["Owned Households"];
+	              factory.addresses = data[0].owned_households;
 	              console.log(factory.addresses);
 	            }).
     			error(function(data, status, headers, config) {

@@ -2,9 +2,9 @@
 	<div class="row">
 		<div class="col-lg-6">
 			<h3>Your Address</h3>
-			<h4>{{vmOrderForm.houseObject["Street Address"]}}<br>
-          {{vmOrderForm.houseObject["City"]}}, {{vmOrderForm.houseObject["States"]}} 
-          {{vmOrderForm.houseObject["Zip Code"]}}</h4>
+			<h4>{{vmOrderForm.houseObject.street_address}}<br>
+          {{vmOrderForm.houseObject.city}}, {{vmOrderForm.houseObject.states}} 
+          {{vmOrderForm.houseObject.zip_code}}</h4>
 			<img src="../images/pizza_sup.png">
 		</div>
 		<div class="col-lg-6">
@@ -12,7 +12,7 @@
 			    <div class="form-group">
 			      <label for="select" class="col-lg-2 control-label">Name</label>
 			      	<div class="col-lg-10">
-				        <select class="form-control" id="select" ng-model="vmOrderForm.resident" ng-options="(resident['first name']+' '+resident['last name']) for resident in vmOrderForm.houseObject['Residents'] track by resident._id"></select>
+				        <select class="form-control" id="select" ng-model="vmOrderForm.resident" ng-options="(resident.first_name +' '+resident.last_name) for resident in vmOrderForm.houseObject.residents track by resident._id"></select>
 			    	</div>
 			    </div>
 		</div>
