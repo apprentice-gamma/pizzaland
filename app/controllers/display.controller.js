@@ -3,5 +3,5 @@ function displayController($http, $location, householdFactory){
 	var vm = this;
 	vm.location = $location;
 
-	householdFactory.getDataFromJson();
+	householdFactory.getData(householdFactory.json);
 }
