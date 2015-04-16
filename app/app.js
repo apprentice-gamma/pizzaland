@@ -5,7 +5,7 @@ pizzaland.config(['$routeProvider', function($routeProvider) {
 		templateUrl: '../../partials/addySearch.html',
 	});
 
-	$routeProvider.when("/order", {
+	$routeProvider.when("/order/:id", {
 	     templateUrl: '../../partials/orderForm.html',
 	});
 
