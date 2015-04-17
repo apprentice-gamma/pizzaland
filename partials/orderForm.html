@@ -41,8 +41,10 @@
 			<div role="alert">
 				<span class="error" ng-show="pizzaQty.input.$error.required || pizzaQty.$pristine">
 				Required!</span>
-				<span class="error" ng-show="pizzaQty.input.$error.number">
+				<span class="error" ng-if="pizzaQty.input.$error.min">
 				Enter a number greater than zero</span>
+				<span class="error" ng-show="pizzaQty.input.$error.number">
+				Enter a number</span>
 			</div>
 		</div>
 		<div class="col-lg-6">
