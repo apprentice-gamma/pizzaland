@@ -1,14 +1,19 @@
 <div ng-controller="orderFormController as vmOrderForm">
 	<div class="row">
 		<div class="col-lg-6">
-			<h3>Your Address</h3>
+			<h3>WE KNOW YOUR ADDRESS</h3>
 			<h4>{{vmOrderForm.houseObject.street}}<br>
           {{vmOrderForm.houseObject.city}}, {{vmOrderForm.houseObject.states}} 
           {{vmOrderForm.houseObject.zip_code}}</h4>
+          
+          <figure>
 			<img src="../images/pizza_sup.png">
+			<figcaption  class="text-warning">OUR RECORDS INDICATE YOU WILL ORDER THIS PIZZA</figcaption>
+		  </figure>
 		</div>
 		<div class="col-lg-6">
-			<h3>Who's Ordering?</h3>
+			<h3>WE KNOW WHO YOU ARE</h3>
+			<h4>Whom amongst you will recieve pizza?</h4>
 			    <div class="form-group">
 			      <label for="select" class="col-lg-2 control-label">Name</label>
 			      	<div class="col-lg-10">
