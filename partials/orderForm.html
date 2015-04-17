@@ -7,8 +7,20 @@
           {{vmOrderForm.houseObject.zip_code}}</h4>
           
           <figure>
-			<img src="../images/pizza_sup.png">
-			<figcaption  class="text-warning">OUR RECORDS INDICATE YOU WILL ORDER THIS PIZZA</figcaption>
+			
+			<div ng-switch="vmOrderForm.houseObject.favorite_pizza">
+			  <div ng-switch-when="supreme"><img src="../images/pizza_sup.png"></div>
+			  <div ng-switch-when="pepperoni"><img src="../images/pizza_pepperoni.png"></div>
+			  <div ng-switch-when="meat"><img src="../images/pizza_meat.png"></div>
+			  <div ng-switch-when="bbq"><img src="../images/pizza_bbq.png"></div>
+			  <div ng-switch-when="veggie"><img src="../images/pizza_veg.png"></div>
+			  <div ng-switch-when="hawaiian"><img src="../images/pizza_hawaiian.png"></div>
+			  <div ng-switch-when="cheese"><img src="../images/pizza_cheese.png"></div>
+
+			  <div ng-switch-default><img src="../images/pizza_cheese.png"></div>
+			</div>
+
+			<figcaption class="text-warning">OUR RECORDS INDICATE YOU WILL ORDER THIS PIZZA</figcaption>
 		  </figure>
 		</div>
 		<div class="col-lg-6">
