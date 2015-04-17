@@ -3,38 +3,45 @@
 		<div class="col-lg-6">
 			<h3>WE KNOW YOUR ADDRESS</h3>
 			<h4>{{vmOrderForm.houseObject.street}}<br>
-          {{vmOrderForm.houseObject.city}}, {{vmOrderForm.houseObject.state}} 
-          {{vmOrderForm.houseObject.zip_code}}</h4>
-          
-          <figure>
-			<img src="../images/pizza_sup.png">
-			<figcaption  class="text-warning">OUR RECORDS INDICATE YOU WILL ORDER THIS PIZZA</figcaption>
-		  </figure>
+			{{vmOrderForm.houseObject.city}}, {{vmOrderForm.houseObject.state}}
+			{{vmOrderForm.houseObject.zip_code}}</h4>
+			
+			<figure>
+				<img src="../images/pizza_sup.png">
+				<figcaption  class="text-warning">OUR RECORDS INDICATE YOU WILL ORDER THIS PIZZA</figcaption>
+			</figure>
 		</div>
 		<div class="col-lg-6">
 			<h3>WE KNOW WHO YOU ARE</h3>
 			<h4>Whom amongst you will recieve pizza?</h4>
-			    <div class="form-group">
-			      <label for="select" class="col-lg-2 control-label">Name</label>
-			      	<div class="col-lg-10">
-				        <select class="form-control" id="select" ng-model="vmOrderForm.resident" ng-options="(resident.first_name +' '+resident.last_name) for resident in vmOrderForm.houseObject.residents|filter:vmOrderForm.validName track by resident._id"></select>
-			    	</div>
-			    </div>
+			<div class="form-group">
+				<label for="select" class="col-lg-2 control-label">Name</label>
+				<div class="col-lg-10">
+					<select class="form-control" id="select" ng-model="vmOrderForm.resident" ng-options="(resident.first_name +' '+resident.last_name) for resident in vmOrderForm.houseObject.residents|filter:vmOrderForm.validName track by resident._id"></select>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="row">
+	<form name="pizzaQty" class="row">
 		<div class="col-lg-6">
-			<div class="form-group">
-			  <label class="control-label" for="inputDefault">Enter Quantity</label>
-			  <input type="text" class="form-control" id="inputDefault" ng-model="vmOrderForm.quantity">
+			<label>Enter Quantity
+				<input type="number" name="input" ng-model="vmOrderForm.quantity"
+				min="1" required>
+			</label>
+			<div role="alert">
+				<span class="error" ng-show="pizzaQty.input.$error.required || pizzaQty.$pristine">
+				Required!</span>
+				<span class="error" ng-show="pizzaQty.input.$error.number">
+				Enter a number greater than zero</span>
 			</div>
 		</div>
 		<div class="col-lg-6">
 			<div class="buttons">
-      <div class="col-lg-10 col-lg-offset-2">
-      	<button type="submit" class="btn btn-primary" ng-click="vmOrderForm.submitOrder()">Submit</button>
-        <button type="reset" class="btn btn-default" ng-click="vmOrderForm.resetForm()">Reset</button>
-      </div>
+				<div class="col-lg-10 col-lg-offset-2">
+					<button type="submit" class="btn btn-primary" ng-click="vmOrderForm.submitOrder()" ng-disabled="pizzaQty.$pristine||(pizzaQty.$dirty && pizzaQty.$invalid)">Submit</button>
+					<button type="reset" class="btn btn-default" ng-click="vmOrderForm.resetForm()">Reset</button>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+	</form>
+<div/>

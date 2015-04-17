@@ -26,3 +26,7 @@
 .pizzaflag {
   margin: 3px 3px;
 }
+
+.error {
+  color: red;
+}
