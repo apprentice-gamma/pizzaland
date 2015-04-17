@@ -4,7 +4,7 @@
 			<h3>Name</h3>
 			<h4>{{vmInvoice.invoiceFactory.resident.first_name}} {{vmInvoice.invoiceFactory.resident.last_name}}</h4>
 			<h3>Email</h3>
-			<h4>{{vmInvoice.invoiceFactory.resident.email}}</h4>
+			<h4>{{vmInvoice.invoiceFactory.resident.email || 'ALVENA KNOWS YOUR EMAIL'}}</h4>
 			<h3>Address</h3>
 			<h4>{{vmInvoice.invoiceFactory.houseObject.street}}<br>
           {{vmInvoice.invoiceFactory.houseObject.city}}, {{vmInvoice.invoiceFactory.houseObject.states}} 
