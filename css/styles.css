@@ -24,9 +24,36 @@
 }
 
 .pizzaflag {
-  margin: 3px 3px;
+  margin-right: 3px;
+  width: 36px;
+  height: 36px;
 }
 
 .error {
   color: red;
+}
+
+#addressSelect {
+  margin-top: 10px;
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #58684B;
+  border-color: #58684B;
+}
+
+a {
+  color: #58684B;
+  text-decoration: none;
+}
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+  z-index: 2;
+  color: #fff;
+  background-color: #58684B;
+  border-color: #58684B;
+}
+.navbar {
+  margin-bottom: 0px;
 }
