@@ -1,4 +1,4 @@
-var pizzaland = angular.module("pizzaland", ["ngRoute"]);
+var pizzaland = angular.module("pizzaland", ["ngRoute", "ui.bootstrap"]);
 
 pizzaland.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when("/", {

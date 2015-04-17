@@ -19,12 +19,13 @@
           <h4 class="list-group-item-heading">Choose your address</h4>
         </a>
 
-        <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses | filter:{'Street Address': vmAddySearch.street, 'City': vmAddySearch.city, 'States': vmAddySearch.state, 'Zip Code':vmAddySearch.zip}">
+        <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses.slice(((vmAddySearch.currentPage-1)*vmAddySearch.itemsPerPage), ((vmAddySearch.currentPage)*vmAddySearch.itemsPerPage)) | filter:{'street': vmAddySearch.street, 'city': vmAddySearch.city, 'state': vmAddySearch.state, 'zip_code':vmAddySearch.zip}">
           {{address.street}}<br>
           {{address.city}}, {{address.states}}<br>
-          {{address.zip_code}}
+          {{address.zip_code || '&nbsp;'}} 
         </a>
-        
+        <pagination total-items="vmAddySearch.households.totalAddresses" ng-model="vmAddySearch.currentPage" items-per-page="vmAddySearch.itemsPerPage" class="pagination-sm" boundary-links="true"></pagination>
+
       </div>
     </div>
   </div>
