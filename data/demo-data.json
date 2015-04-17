@@ -5,7 +5,7 @@
         "owned_households": [
             {
                 "_id": "09309380923kfjsndk0",
-                "street_address": "Ap #745-1275 Quis, Street",
+                "street": "Ap #745-1275 Quis, Street",
                 "residents": [
                     {
                         "_id": "oijeoiu90840983093",
@@ -30,7 +30,7 @@
                 ],
                 "city": "Lowell",
                 "zip_code": "33369",
-                "states": "MA",
+                "state": "MA",
                 "favorite_pizza": "Supreme",
                 "number_of_bathrooms": "",
                 "party_house": "true",
@@ -38,7 +38,7 @@
             },
             {
                 "_id": "09i3092i03jlijoiod",
-                "street_address": "195 At Rd.",
+                "street": "195 At Rd.",
                 "residents": [
                     {
                         "_id": "092092092092oaisoa",
@@ -63,7 +63,7 @@
                 ],
                 "city": "Kailua",
                 "zip_code": "32971",
-                "states": "HI",
+                "state": "HI",
                 "favorite_pizza": "Pepperoni",
                 "number_of_bathrooms": "5",
                 "party_house": "false",
@@ -79,7 +79,7 @@
         "owned_households": [
             {
                 "_id": "092092i092ioos",
-                "street_address": "622-948 Semper Av.",
+                "street": "622-948 Semper Av.",
                 "residents": [
                     {
                         "_id": "0920920920dowi",
@@ -114,7 +114,7 @@
                 ],
                 "city": "Cambridge",
                 "zip_code": "55382",
-                "states": "MA",
+                "state": "MA",
                 "favorite_pizza": "Supreme",
                 "number_of_bathrooms": "2",
                 "party_house": "false",
@@ -122,7 +122,7 @@
             },
             {
                 "_id": "oijeoie989839839893",
-                "street_address": "P.O. Box 141, 5056 Ipsum Av.",
+                "street": "P.O. Box 141, 5056 Ipsum Av.",
                 "residents": [
                     {
                         "_id": "982982982oiduod",
@@ -157,7 +157,7 @@
                 ],
                 "city": "Richmond",
                 "zip_code": "54294",
-                "states": "VA",
+                "state": "VA",
                 "favorite_pizza": "Vegetarian",
                 "number_of_bathrooms": "4",
                 "party_house": "false",
@@ -165,7 +165,7 @@
             },
             {
                 "_id": "09209309409foijodo0",
-                "street_address": "808-117 Ante St.",
+                "street": "808-117 Ante St.",
                 "residents": [
                     {
                         "_id": "09209209209ud09u0dd",
@@ -200,7 +200,7 @@
                 ],
                 "city": "Sacramento",
                 "zip_code": "94830",
-                "states": "CA",
+                "state": "CA",
                 "favorite_pizza": "Vegetarian",
                 "number_of_bathrooms": "2",
                 "party_house": "true",
