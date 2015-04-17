@@ -13,9 +13,23 @@
           {{vmInvoice.invoiceFactory.houseObject.zip_code}}</h4>
 		</div>
 		<div class="col-lg-6">
-			<h3>ALVENA WILL GIVE YOU</h3>
-			<h4>{{vmInvoice.invoiceFactory.houseObject.favorite_pizza | uppercase}} PIZZA...</h4>
-			<img src="../images/pizza_sup.png">
+			<figure>	
+				<figcaption>
+					<h3>WE GIVE YOU</h3>
+					<h4>{{vmInvoice.invoiceFactory.houseObject.favorite_pizza | uppercase}} PIZZA...</h4>
+				</figcaption>
+				
+				<div ng-switch="vmInvoice.invoiceFactory.houseObject.favorite_pizza">
+					<div ng-switch-when="supreme"><img src="../images/pizza_sup.png"></div>
+					<div ng-switch-when="pepperoni"><img src="../images/pizza_pepperoni.png"></div>
+					<div ng-switch-when="meat"><img src="../images/pizza_meat.png"></div>
+					<div ng-switch-when="bbq"><img src="../images/pizza_bbq.png"></div>
+					<div ng-switch-when="veggie"><img src="../images/pizza_veg.png"></div>
+					<div ng-switch-when="hawaiian"><img src="../images/pizza_hawaiian.png"></div>
+					<div ng-switch-when="cheese"><img src="../images/pizza_cheese.png"></div>
+					<div ng-switch-default><img src="../images/pizza_cheese.png"></div>
+				</div>
+		  </figure>
 		</div>
 	</div>
 	
