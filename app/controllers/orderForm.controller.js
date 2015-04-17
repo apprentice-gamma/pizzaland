@@ -7,6 +7,7 @@ function orderFormController($http, householdFactory, $routeParams, $location, i
 	vm.houseObject = houseFinder();
 	vm.resident = vm.houseObject.residents[0];
 	vm.submitOrder = submitOrder;
+	vm.resetForm = resetForm;
 	vm.quantity = 0;
 	vm.validName = validName;
 
@@ -36,4 +37,8 @@ function orderFormController($http, householdFactory, $routeParams, $location, i
 		$location.url('/invoice');
 	}
 
+	function resetForm(){
+		vm.quantity = 0;
+		vm.resident = vm.houseObject.residents[0];
+	}
 }

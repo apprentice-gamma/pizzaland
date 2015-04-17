@@ -6,9 +6,11 @@ function addySearchController($http, $scope, householdFactory){
 	vm.zip = "";
 	vm.state = "";
 	
+	vm.currentPage = 1;
+	vm.itemsPerPage = 5;
+	
 	vm.households = householdFactory;
 		
 	console.log(vm.households);
-
 }
 

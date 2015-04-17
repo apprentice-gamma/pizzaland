@@ -16,7 +16,8 @@
  
 <div class="navbar navbar-default">
   <div class="container">
-    <a class="navbar-brand" href="#/">Pizzaland</a>
+    <img src="./images/pizzaflag_tiny.png" width="36px" height="36px" class="pull-left pizzaflag">
+    <a href="#/" class="navbar-brand">Pizzaland</a>
     <ul class="nav navbar-nav">
       <li><a href="#/">Start over</a></li>
     </ul>
@@ -26,7 +27,8 @@
 <div class="container">
     <div class="jumbotron text-center" ng-show="display.location.path() === '/'">
     <h1><img class="pizza-man" src="./images/pizzaMan.jpg">Pizzaland</h1>
-    <p class="lead">Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza Pizza. </p>
+    <p class="lead">Pizzaland make pizza. WHEN WE WANT TO. You get pizza when we say you get pizza. Pizzaland operates under loving <del>dictatorship</del> <ins>guidance</ins> of our leader, Alvena. Hail Alvena</p>
+    <p class="lead">Go ahead, try to order pizza. Our records will indicate what you get. Hail Alvena</p>
   </div>
 
   <div data-ng-view> </div>
@@ -37,9 +39,13 @@
 </div>
 	<!-- script references -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular-route.min.js"></script>
+    <script src="./js/ui-bootstrap.js"></script>
+    <script src="./js/ui-bootstrap-tpls.js"></script>
+
 		<script src="./js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+    
 
     <script src="./app/app.js"></script>
     <script src="./app/controllers/addysearch.controller.js"></script>

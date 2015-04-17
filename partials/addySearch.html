@@ -1,6 +1,7 @@
 <div class="row" ng-controller="addySearchController as vmAddySearch">
     <div class="col-lg-6">
-      <h4>Address Search</h4>
+      <h4>Search our records for your Address</h4>
+      <h5>If you aren't in our records, WHY NOT?</h5>
       <div class="form-group">
         <label class="control-label" for="inputSmall">Street Address</label>
         <input class="form-control input-sm" type="text" id="inputSmall" ng-model="vmAddySearch.street">
@@ -16,15 +17,14 @@
     <div class="col-lg-6">
       <div class="list-group">
         <a href="#" class="list-group-item active">
-          <h4 class="list-group-item-heading">Choose your address</h4>
+          <h4 class="list-group-item-heading">Select your Address</h4>
         </a>
-
-        <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses | filter:{'street': vmAddySearch.street, 'city': vmAddySearch.city, 'state': vmAddySearch.state, 'zip_code':vmAddySearch.zip}" ng-hide="address.city === 'undefined'">
+        <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses | filter:{'street': vmAddySearch.street, 'city': vmAddySearch.city, 'state': vmAddySearch.state, 'zip_code':vmAddySearch.zip} | limitTo:5:((vmAddySearch.currentPage - 1) * 5)" ng-hide="address.city === 'undefined'">
             {{address.street}}<br>
             {{address.city}}, {{address.state}}<br>
-            {{address.zip_code}}<br>
+            {{address.zip_code || '&nbsp;'}} 
         </a>
-        
+        <pagination total-items="vmAddySearch.households.totalAddresses" ng-model="vmAddySearch.currentPage" items-per-page="vmAddySearch.itemsPerPage" class="pagination-sm" boundary-links="true"></pagination>
       </div>
     </div>
   </div>
