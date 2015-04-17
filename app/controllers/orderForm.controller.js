@@ -8,7 +8,7 @@ function orderFormController($http, householdFactory, $routeParams, $location, i
 	vm.resident = vm.houseObject.residents[0];
 	vm.submitOrder = submitOrder;
 	vm.resetForm = resetForm;
-	vm.quantity = 0;
+	vm.quantity = undefined;
 	vm.validName = validName;
 
 	console.log(vm.houseObject);
