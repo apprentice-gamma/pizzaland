@@ -5,6 +5,7 @@ function addySearchController($http, $scope, householdFactory){
 	vm.city = "";
 	vm.zip = "";
 	vm.state = "";
+	
 	vm.currentPage = 1;
 	vm.itemsPerPage = 5;
 	
