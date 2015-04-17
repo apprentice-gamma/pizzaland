@@ -20,7 +20,10 @@
           <h4 class="list-group-item-heading">Select your Address</h4>
         </a>
 
-        <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses.slice(((vmAddySearch.currentPage-1)*vmAddySearch.itemsPerPage), ((vmAddySearch.currentPage)*vmAddySearch.itemsPerPage)) | filter:{'street': vmAddySearch.street, 'city': vmAddySearch.city, 'state': vmAddySearch.state, 'zip_code':vmAddySearch.zip}">
+        <!-- <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses.slice(((vmAddySearch.currentPage-1)*vmAddySearch.itemsPerPage), ((vmAddySearch.currentPage)*vmAddySearch.itemsPerPage)) | filter:{'street': vmAddySearch.street, 'city': vmAddySearch.city, 'state': vmAddySearch.state, 'zip_code':vmAddySearch.zip}"> -->
+
+        <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses| filter:{'street': vmAddySearch.street, 'city': vmAddySearch.city, 'state': vmAddySearch.state, 'zip_code':vmAddySearch.zip} | limitTo:5:((vmAddySearch.currentPage - 1) * 5)">
+
           {{address.street}}<br>
           {{address.city}}, {{address.states}}<br>
           {{address.zip_code || '&nbsp;'}} 

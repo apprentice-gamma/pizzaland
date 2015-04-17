@@ -12,6 +12,5 @@ function addySearchController($http, $scope, householdFactory){
 	vm.households = householdFactory;
 		
 	console.log(vm.households);
-
 }
 
