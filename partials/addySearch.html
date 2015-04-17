@@ -20,7 +20,7 @@
         </a>
 
         <a ng-href="/#/order/{{address._id}}" class="list-group-item" ng-repeat="address in vmAddySearch.households.addresses | filter:{'Street Address': vmAddySearch.street, 'City': vmAddySearch.city, 'States': vmAddySearch.state, 'Zip Code':vmAddySearch.zip}">
-          {{address.street_address}}<br>
+          {{address.street}}<br>
           {{address.city}}, {{address.states}}<br>
           {{address.zip_code}}
         </a>
