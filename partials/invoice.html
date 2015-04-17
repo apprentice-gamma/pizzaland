@@ -3,8 +3,10 @@
 		<div class="col-lg-6">
 			<h3>Name</h3>
 			<h4>{{vmInvoice.invoiceFactory.resident.first_name}} {{vmInvoice.invoiceFactory.resident.last_name}}</h4>
+			<div ng-hide="vmInvoice.validEmail">
 			<h3>Email</h3>
 			<h4>{{vmInvoice.invoiceFactory.resident.email}}</h4>
+			<div/>
 			<h3>Address</h3>
 			<h4>{{vmInvoice.invoiceFactory.houseObject.street}}<br>
           {{vmInvoice.invoiceFactory.houseObject.city}}, {{vmInvoice.invoiceFactory.houseObject.state}} 

@@ -1,9 +1,11 @@
 angular.module("pizzaland").controller("invoiceController", invoiceController); 
 function invoiceController($http, householdFactory, invoiceFactory){
 	var vm = this;
-	vm.message = "This is the invoice";
-	
+	vm.noEmailMessage = "snarky message";
+	vm.validEmail = validEmail;
 	vm.invoiceFactory = invoiceFactory;
 
-	console.log(invoiceFactory.quantity);
+	function validEmail(){
+		return /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(invoiceFactory.resident.email);
+	}
 }
