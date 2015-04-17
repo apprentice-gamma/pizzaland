@@ -3,7 +3,7 @@
 		<div class="col-lg-6">
 			<h3>WE KNOW YOUR ADDRESS</h3>
 			<h4>{{vmOrderForm.houseObject.street}}<br>
-          {{vmOrderForm.houseObject.city}}, {{vmOrderForm.houseObject.states}} 
+          {{vmOrderForm.houseObject.city}}, {{vmOrderForm.houseObject.state}} 
           {{vmOrderForm.houseObject.zip_code}}</h4>
           
           <figure>
@@ -17,7 +17,7 @@
 			    <div class="form-group">
 			      <label for="select" class="col-lg-2 control-label">Name</label>
 			      	<div class="col-lg-10">
-				        <select class="form-control" id="select" ng-model="vmOrderForm.resident" ng-options="(resident.first_name +' '+resident.last_name) for resident in vmOrderForm.houseObject.residents track by resident._id"></select>
+				        <select class="form-control" id="select" ng-model="vmOrderForm.resident" ng-options="(resident.first_name +' '+resident.last_name) for resident in vmOrderForm.houseObject.residents|filter:vmOrderForm.validName track by resident._id"></select>
 			    	</div>
 			    </div>
 		</div>

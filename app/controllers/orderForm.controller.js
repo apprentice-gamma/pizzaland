@@ -9,8 +9,17 @@ function orderFormController($http, householdFactory, $routeParams, $location, i
 	vm.submitOrder = submitOrder;
 	vm.resetForm = resetForm;
 	vm.quantity = 0;
+	vm.validName = validName;
 
 	console.log(vm.houseObject);
+
+	// $scope.myFilter = function(user) {
+ //  		return /^c5$/.test(user.type);
+	// }
+
+	function validName(resident){
+		return /^[a-z ,.'-]+$/i.test(resident.first_name);
+	}
 	
 	function houseFinder(){
 		for (var i = 0; i < householdFactory.addresses.length; i++) {
