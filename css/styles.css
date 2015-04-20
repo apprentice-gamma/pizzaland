@@ -36,7 +36,13 @@
   border-color: #7C9166;
 }
 
-
+.info-box {
+  background-color: #f8f8f8;
+  border-color: gray;
+  border-radius: 4px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
 .jumbotron {
   padding: 0px;
   margin-bottom: 30px;
