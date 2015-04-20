@@ -6,6 +6,43 @@
 	width: 320px;
 	height: 300px;
 }
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #58684B;
+  border-color: #58684B;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #58684B;
+  border-color: #fff;
+}
+.btn-warning {
+  color: #fff;
+  background-color: #C3262D;
+  border-color: #C3262D;
+}
+.btn-warning:hover,
+.btn-warning:focus {
+  color: #fff;
+  background-color: #C3262D;
+  border-color: #fff;
+}
+.btn-primary[disabled]{
+  color: #ddd;
+  background-color: #7C9166;
+  border-color: #7C9166;
+}
+
+.info-box {
+  background-color: #f8f8f8;
+  border-color: gray;
+  border-radius: 4px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
 .jumbotron {
   padding: 0px;
   margin-bottom: 30px;
@@ -56,4 +93,20 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 }
 .navbar {
   margin-bottom: 0px;
+}
+
+/*pizza imgs*/
+.ng-scope > img {
+    margin-right:15%;
+    margin-left: 15%;
+    width: 70%;
+}
+
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #58684B;
+  border-color: #58684B;
+}
+.panel {
+  margin-top: 20px;
 }
