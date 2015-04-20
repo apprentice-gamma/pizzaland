@@ -4,22 +4,22 @@
 			<h3>Name</h3>
 			<h4>{{vmInvoice.invoiceFactory.resident.first_name}} {{vmInvoice.invoiceFactory.resident.last_name}}</h4>
 			<div ng-hide="vmInvoice.validEmail">
-			<h3>Email</h3>
-			<h4>{{vmInvoice.invoiceFactory.resident.email}}</h4>
-			<div/>
+				<h3>Email</h3>
+				<h4>{{vmInvoice.invoiceFactory.resident.email}}</h4>
+			</div>
 			<h3>Address</h3>
-			<h4>{{vmInvoice.invoiceFactory.houseObject.street}}<br>
-          {{vmInvoice.invoiceFactory.houseObject.city}}, {{vmInvoice.invoiceFactory.houseObject.state}} 
-          {{vmInvoice.invoiceFactory.houseObject.zip_code}}</h4>
-		</div>
+			<h4>
+				{{vmInvoice.invoiceFactory.houseObject.street}}<br>
+	          	{{vmInvoice.invoiceFactory.houseObject.city}}, {{vmInvoice.invoiceFactory.houseObject.state}} 
+	          	{{vmInvoice.invoiceFactory.houseObject.zip_code}}
+          	</h4>
+        </div>
 		<div class="col-lg-6">
-			<figure>	
-				<figcaption>
-					<h3>WE GIVE YOU</h3>
-					<h4>{{vmInvoice.invoiceFactory.houseObject.favorite_pizza | uppercase}} PIZZA...</h4>
-				</figcaption>
-				
-				<div ng-switch="vmInvoice.invoiceFactory.houseObject.favorite_pizza">
+			<div class="panel panel-default">
+			  <!-- Default panel contents -->
+			  <div class="panel-heading">Your Order</div>
+			  <div class="panel-body">
+	          	<div class="pizza" ng-switch="vmInvoice.invoiceFactory.houseObject.favorite_pizza">
 					<div ng-switch-when="supreme"><img src="../images/pizza_sup.png"></div>
 					<div ng-switch-when="pepperoni"><img src="../images/pizza_pepperoni.png"></div>
 					<div ng-switch-when="meat"><img src="../images/pizza_meat.png"></div>
@@ -29,44 +29,30 @@
 					<div ng-switch-when="cheese"><img src="../images/pizza_cheese.png"></div>
 					<div ng-switch-default><img src="../images/pizza_cheese.png"></div>
 				</div>
-		  </figure>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-lg-6">
-			<div class="form-group">
-				<!-- <label class="control-label" for="inputDefault">Enter Quantity</label>
-				<input type="text" class="form-control" id="inputDefault"> -->
-			</div>
-		</div>
-		<div class="col-lg-6">
-			<table class="table table-striped table-hover ">
-				<tbody>
-					<tr>
-						<td>Price</td>
-						<td>{{19.95 | currency}}</td>
-					</tr>
-					<tr>
-						<td>Quantity</td>
-						<td>{{vmInvoice.invoiceFactory.quantity}}</td>
-					</tr>
-					<tr>
-						<td>Tax</td>
-						<td>{{(vmInvoice.invoiceFactory.quantity*19.95)*.06 | currency}}</td>
-					</tr>
-					<tr>
-						<td>Total</td>
-						<td>{{(vmInvoice.invoiceFactory.quantity*19.95)*1.06 | currency}}</td>
-					</tr>
-				</tbody>
-			</table>
-			<div class="buttons">
-				<div class="col-lg-10 col-lg-offset-2">
-					<button type="submit" class="btn btn-primary">Confirm Order</button>
-					<button type="reset" class="btn btn-default">Cancel Order</button>
+			    <p>OUR RECORDS INDICATE YOU WILL ORDER THIS {{vmInvoice.invoiceFactory.houseObject.favorite_pizza | uppercase}} PIZZA</p>
 				</div>
+
+				  <table class="table table-striped">
+					<tbody>
+						<tr>
+							<td>Price</td>
+							<td>{{19.95 | currency}}</td>
+						</tr>
+						<tr>
+							<td>Quantity</td>
+							<td>{{vmInvoice.invoiceFactory.quantity}}</td>
+						</tr>
+						<tr>
+							<td>Tax</td>
+							<td>{{(vmInvoice.invoiceFactory.quantity*19.95)*.06 | currency}}</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td>{{(vmInvoice.invoiceFactory.quantity*19.95)*1.06 | currency}}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
-	</div>
+	</div>	
 </div>

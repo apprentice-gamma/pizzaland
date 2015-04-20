@@ -6,6 +6,37 @@
 	width: 320px;
 	height: 300px;
 }
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #58684B;
+  border-color: #58684B;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #58684B;
+  border-color: #fff;
+}
+.btn-warning {
+  color: #fff;
+  background-color: #C3262D;
+  border-color: #C3262D;
+}
+.btn-warning:hover,
+.btn-warning:focus {
+  color: #fff;
+  background-color: #C3262D;
+  border-color: #fff;
+}
+.btn-primary[disabled]{
+  color: #ddd;
+  background-color: #7C9166;
+  border-color: #7C9166;
+}
+
+
 .jumbotron {
   padding: 0px;
   margin-bottom: 30px;
